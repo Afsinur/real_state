@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+
+    <title>Arda</title>
+
+    <!-- Local css -->
+    <link rel="stylesheet" href="css/index.css" />
+    <!-- Vue CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <!-- Section1 -->
+        <div class="sec1">
+          <div class="container py-4">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+              <div class="container">
+                <a class="navbar-brand" href="#"
+                  ><img
+                    :src="data.section1.logo.src"
+                    :alt="data.section1.logo.alt"
+                    class="sec1_logo img-responsive"
+                /></a>
+
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="sec1_fw_nav_ul navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li
+                      v-for="(item, index) in data.section1.navLinks"
+                      :key="index"
+                      class="nav-item mx-2"
+                    >
+                      <a
+                        :class="item.class"
+                        aria-current="page"
+                        href="#"
+                        v-html="item.a"
+                      >
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Content -->
+          <div class="container mt-3 mb-4 pt-4 pb-5">
+            <div class="row mt-1 pt-2 mb-5 pb-5">
+              <div
+                class="sec1_content_div mb-3 pb-3 col-md-6 col-12 d-flex flex-column align-items-start justify-content-start"
+              >
+                <h1 class="text-white fs-1 my-3">
+                  {{ data.section1.content.h1 }}
+                </h1>
+
+                <p class="text-white fs-5 my-3">
+                  {{ data.section1.content.p }}
+                </p>
+
+                <a
+                  href="#"
+                  class="sec1_last_a my-3 d-flex text-decoration-none text-dark px-4 py-3 bg-white"
+                  >{{ data.section1.content.a }}
+                  <img
+                    :src="data.section1.content.src"
+                    :alt="data.section1.content.alt"
+                    class="img-fluid px-2"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+    <!-- Local js -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
